@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://discordlookup.com/ -->
+<html lang="en" class="no-js h-100"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="description" content="Get more out of Discord with Discord Lookup! Snowflake Decoder, Guild List with Stats, Invite Info and more...">
+<meta property="og:description" content="Get more out of Discord with Discord Lookup! Snowflake Decoder, Guild List with Stats, Invite Info and more...">
+<meta name="keywords" content="discord, discord lookup, discordlookup, lookup, snowflake, toolbox, tool box, guild count, invite info, user info, discord tools, tools, experiments, rollouts, search, discord search">
+<title>DiscordLookup</title>
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#5865F2">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:site_name" content="DiscordLookup.com">
+<meta property="og:title" content="DiscordLookup">
+<meta property="og:type" content="website">
+    <meta name="csrf-token" content="LHvSKkpwdzWmaqCW4HV53wg807YW6e4X9khlJU0g">
+
+    <link rel="icon" sizes="any" type="image/svg+xml" href="https://discordlookup.com/images/branding/favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="https://discordlookup.com/images/branding/favicon/favicon.png">
+    <link rel="apple-touch-icon" href="https://discordlookup.com/images/branding/favicon/favicon.png">
+
+    <meta name="og:image" content="https://discordlookup.com/images/branding/icon-blurple.png">
+    <meta name="og:site" content="https://discordlookup.com">
+    <meta name="og:locale" content="en">
+    <meta name="og:url" content="https://discordlookup.com">
+
+    <link rel="search" type="application/opensearchdescription+xml" title="DiscordLookup" href="https://discordlookup.com/opensearch.xml">
+
+    
+
+    <link href="./DiscordLookup_files/app.css" rel="stylesheet">
+    <style>[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+</head>
+
+<body class="flex flex-col min-h-screen bg-[#292b2f]">
+
+<main class="flex-grow bg-discord-gray-3 text-white">
+    <div>
+    <header x-data="{ mobileNavOpen: false }" id="page-header" class="flex flex-none items-center py-6">
+        <div class="container relative xl:max-w-7xl mx-auto px-4 lg:px-10">
+            <div class="flex items-center justify-between">
+                <a href="https://discordlookup.com/" class="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-blue-600 hover:text-blue-400">
+                    <img src="./DiscordLookup_files/logo-blurple.svg" class="max-h-4" alt="DiscordLookup Logo">
+                </a>
+
+                <ul class="hidden lg:flex items-center">
+                                            <li class="relative group">
+                            <a href="https://discordlookup.com/" class="inline-flex items-center space-x-1 h-8 px-4 text-white hover:text-gray-300 group-hover:text-gray-300 font-bold">
+                                <span>Home</span>
+                                                            </a>
+                                                    </li>
+                                            <li class="relative group">
+                            <a href="javascript:;" class="inline-flex items-center space-x-1 h-8 px-4 text-white hover:text-gray-300 group-hover:text-gray-300 font-semibold">
+                                <span>Lookups</span>
+                                                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="opacity-50 transform transition duration-200 ease-out group-hover:rotate-180 hi-solid hi-chevron-down inline-block w-4 h-4"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                                            </a>
+                                                            <div class="absolute w-64 top-8 left-1/2 -ml-24 z-50 pt-5 invisible group-hover:visible">
+                                    <div class="bg-discord-gray-1 shadow-sm shadow-gray-900 ring-1 ring-black ring-opacity-5 rounded-lg transform origin-top transition duration-300 ease-out opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 overflow-hidden">
+                                        <div class="grid grid-cols-1 transform transition duration-500 ease-out opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100">
+                                            <div class="p-6 space-y-6">
+                                                <nav class="flex flex-col space-y-3">
+                                                                                                            <a href="https://discordlookup.com/user" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            User Lookup
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/guild" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Guild Lookup
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/application" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Application Lookup
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/inviteresolver" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Invite Resolver
+                                                        </a>
+                                                                                                    </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </li>
+                                            <li class="relative group">
+                            <a href="javascript:;" class="inline-flex items-center space-x-1 h-8 px-4 text-white hover:text-gray-300 group-hover:text-gray-300 font-semibold">
+                                <span>Timestamps</span>
+                                                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="opacity-50 transform transition duration-200 ease-out group-hover:rotate-180 hi-solid hi-chevron-down inline-block w-4 h-4"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                                            </a>
+                                                            <div class="absolute w-64 top-8 left-1/2 -ml-24 z-50 pt-5 invisible group-hover:visible">
+                                    <div class="bg-discord-gray-1 shadow-sm shadow-gray-900 ring-1 ring-black ring-opacity-5 rounded-lg transform origin-top transition duration-300 ease-out opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 overflow-hidden">
+                                        <div class="grid grid-cols-1 transform transition duration-500 ease-out opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100">
+                                            <div class="p-6 space-y-6">
+                                                <nav class="flex flex-col space-y-3">
+                                                                                                            <a href="https://discordlookup.com/snowflake" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Snowflake Decoder
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/timestamp" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Timestamp Styles
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/snowflake-distance" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Snowflake Distance Calculator
+                                                        </a>
+                                                                                                    </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </li>
+                                            <li class="relative group">
+                            <a href="https://discordlookup.com/guildlist" class="inline-flex items-center space-x-1 h-8 px-4 text-white hover:text-gray-300 group-hover:text-gray-300 font-semibold">
+                                <span>Guild List</span>
+                                                            </a>
+                                                    </li>
+                                            <li class="relative group">
+                            <a href="https://discordlookup.com/experiments" class="inline-flex items-center space-x-1 h-8 px-4 text-white hover:text-gray-300 group-hover:text-gray-300 font-semibold">
+                                <span>Experiments</span>
+                                                            </a>
+                                                    </li>
+                                            <li class="relative group">
+                            <a href="javascript:;" class="inline-flex items-center space-x-1 h-8 px-4 text-white hover:text-gray-300 group-hover:text-gray-300 font-semibold">
+                                <span>Advanced</span>
+                                                                    <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="opacity-50 transform transition duration-200 ease-out group-hover:rotate-180 hi-solid hi-chevron-down inline-block w-4 h-4"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                                            </a>
+                                                            <div class="absolute w-64 top-8 left-1/2 -ml-24 z-50 pt-5 invisible group-hover:visible">
+                                    <div class="bg-discord-gray-1 shadow-sm shadow-gray-900 ring-1 ring-black ring-opacity-5 rounded-lg transform origin-top transition duration-300 ease-out opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 overflow-hidden">
+                                        <div class="grid grid-cols-1 transform transition duration-500 ease-out opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100">
+                                            <div class="p-6 space-y-6">
+                                                <nav class="flex flex-col space-y-3">
+                                                                                                            <a href="https://discordlookup.com/permissions-calculator" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Permissions Calculator
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/guild-shard-calculator" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Guild Shard Calculator
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/webhook-invalidator" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Discord Webhook Invalidator
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/domains" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            Bad Domain Check
+                                                        </a>
+                                                                                                            <a href="https://discordlookup.com/murmurhash" class="flex items-center space-x-2 font-medium text-sm text-gray-200 hover:text-discord-blurple active:text-[#414aa5]">
+                                                            MurmurHash3 Calculator
+                                                        </a>
+                                                                                                    </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </li>
+                                            <li class="relative group">
+                            <a href="https://discordlookup.com/help" class="inline-flex items-center space-x-1 h-8 px-4 text-white hover:text-gray-300 group-hover:text-gray-300 font-semibold">
+                                <span>Help</span>
+                                                            </a>
+                                                    </li>
+                                    </ul>
+
+                <div class="flex">
+                                                                <div class="flex justify-end">
+                            <div x-data="{ open: false }" class="relative inline-block">
+                                <button type="button" class="inline-flex justify-center items-center space-x-2 border font-semibold px-3 py-2 leading-5 text-sm rounded border-discord-blurple bg-discord-blurple text-white hover:text-white hover:bg-[#4e5acb] hover:border-[#4e5acb] focus:ring-opacity-50 active:bg-[#414aa5] active:border-[#414aa5]" id="usermenu-dropdown" aria-haspopup="true" x-bind:aria-expanded="open" x-on:click="open = true" aria-expanded="false">
+                                    <img src="./DiscordLookup_files/a09541bbb9214ba3b7f509d1eeffb17f.webp" alt="User Avatar" class="inline-block h-4 w-4 flex-none rounded-full">
+                                    <span>Mr LiPx</span>
+                                    <svg class="hi-mini hi-chevron-down inline-block h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg>
+                                </button>
+
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" x-on:click.outside="open = false" role="menu" aria-labelledby="usermenu-dropdown" class="absolute right-0 z-10 mt-2 w-64 origin-top-right rounded-lg shadow-sm shadow-gray-900" style="display: none;">
+                                    <div class="divide-y divide-discord-gray-5 rounded-lg bg-discord-gray-1 ring-1 ring-gray-700 ring-opacity-5">
+                                        <div class="flex items-center space-x-3 px-5 py-3">
+                                            <img src="./DiscordLookup_files/a09541bbb9214ba3b7f509d1eeffb17f.webp" alt="User Avatar" class="inline-block h-10 w-10 flex-none rounded-full">
+                                            <div class="grow text-sm">
+                                                <a href="https://discordlookup.com/user/1150713121560862720" class="font-semibold text-gray-300 hover:text-gray-400">
+                                                    Mr LiPx
+                                                </a>
+                                                <p class="break-all text-xs font-medium text-gray-400">
+                                                    @mrlipx
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-y-1 p-2.5">
+                                            
+                                            <a role="menuitem" href="https://discordlookup.com/logout" class="group flex items-center justify-between space-x-2 rounded-lg border border-transparent px-2.5 py-2 text-sm font-medium text-gray-200 hover:bg-discord-gray-3 hover:text-white active:border-gray-600">
+                                                <i class="fas fa-sign-in-alt w-5 flex-none opacity-25 group-hover:opacity-50"></i>
+                                                <span class="grow">Logout</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <div class="ml-3 lg:hidden">
+                        <button x-on:click="mobileNavOpen = true" type="button" class="inline-flex justify-center items-center space-x-2 border font-semibold px-3 py-2 leading-5 text-sm rounded border-discord-blurple bg-discord-blurple text-white hover:text-white hover:bg-[#4e5acb] hover:border-[#4e5acb] focus:ring-opacity-50 active:bg-[#414aa5] active:border-[#414aa5]" aria-controls="mobileNav">
+                            <svg class="hi-mini hi-bars-3 inline-block h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav x-show="mobileNavOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-50 translate-x-full" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-50 translate-x-full" id="mobileNav" class="fixed bottom-0 right-0 top-0 z-50 w-80 overflow-auto bg-discord-gray-1 shadow-lg lg:hidden outline-none" tabindex="-1" aria-labelledby="mobileNavLabel" x-bind:aria-modal="mobileNavOpen ? &#39;true&#39; : null" x-bind:role="mobileNavOpen ? &#39;dialog&#39; : null" style="display: none;">
+            <div class="flex items-center justify-between p-6">
+                <button x-on:click="mobileNavOpen = false" type="button" class="inline-flex ml-auto justify-center items-center space-x-2 border font-semibold px-3 py-2 leading-5 text-sm rounded border-discord-blurple bg-discord-blurple text-white hover:text-white hover:bg-[#4e5acb] hover:border-[#4e5acb] focus:ring-opacity-50 active:bg-[#414aa5] active:border-[#414aa5]">
+                    <svg class="hi-mini hi-x-mark -mx-0.5 inline-block h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"></path></svg>
+                </button>
+            </div>
+            <hr class="opacity-10">
+            <div class="flex flex-col gap-4 px-6 py-6">
+                                    <div class="space-y-2">
+                                                    <a href="https://discordlookup.com/" class="text-xs font-semibold uppercase tracking-wider  text-white font-bold hover:text-gray-200 active:text-gray-300">
+                                Home
+                            </a>
+                                            </div>
+                                    <div class="space-y-2">
+                                                    <h4 class="text-xs font-semibold uppercase tracking-wider text-discord-blurple">
+                                Lookups
+                            </h4>
+                            <nav class="flex flex-col gap-1">
+                                                                    <a href="https://discordlookup.com/user" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        User Lookup
+                                    </a>
+                                                                    <a href="https://discordlookup.com/guild" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Guild Lookup
+                                    </a>
+                                                                    <a href="https://discordlookup.com/application" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Application Lookup
+                                    </a>
+                                                                    <a href="https://discordlookup.com/inviteresolver" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Invite Resolver
+                                    </a>
+                                                            </nav>
+                                            </div>
+                                    <div class="space-y-2">
+                                                    <h4 class="text-xs font-semibold uppercase tracking-wider text-discord-blurple">
+                                Timestamps
+                            </h4>
+                            <nav class="flex flex-col gap-1">
+                                                                    <a href="https://discordlookup.com/snowflake" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Snowflake Decoder
+                                    </a>
+                                                                    <a href="https://discordlookup.com/timestamp" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Timestamp Styles
+                                    </a>
+                                                                    <a href="https://discordlookup.com/snowflake-distance" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Snowflake Distance Calculator
+                                    </a>
+                                                            </nav>
+                                            </div>
+                                    <div class="space-y-2">
+                                                    <a href="https://discordlookup.com/guildlist" class="text-xs font-semibold uppercase tracking-wider  text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                Guild List
+                            </a>
+                                            </div>
+                                    <div class="space-y-2">
+                                                    <a href="https://discordlookup.com/experiments" class="text-xs font-semibold uppercase tracking-wider  text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                Experiments
+                            </a>
+                                            </div>
+                                    <div class="space-y-2">
+                                                    <h4 class="text-xs font-semibold uppercase tracking-wider text-discord-blurple">
+                                Advanced
+                            </h4>
+                            <nav class="flex flex-col gap-1">
+                                                                    <a href="https://discordlookup.com/permissions-calculator" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Permissions Calculator
+                                    </a>
+                                                                    <a href="https://discordlookup.com/guild-shard-calculator" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Guild Shard Calculator
+                                    </a>
+                                                                    <a href="https://discordlookup.com/webhook-invalidator" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Discord Webhook Invalidator
+                                    </a>
+                                                                    <a href="https://discordlookup.com/domains" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        Bad Domain Check
+                                    </a>
+                                                                    <a href="https://discordlookup.com/murmurhash" class="text-sm font-medium text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                        MurmurHash3 Calculator
+                                    </a>
+                                                            </nav>
+                                            </div>
+                                    <div class="space-y-2">
+                                                    <a href="https://discordlookup.com/help" class="text-xs font-semibold uppercase tracking-wider  text-gray-400 hover:text-gray-200 active:text-gray-100">
+                                Help
+                            </a>
+                                            </div>
+                            </div>
+        </nav>
+
+        <div x-show="mobileNavOpen" x-on:click="mobileNavOpen = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-40 bg-gray-900 bg-opacity-20 backdrop-blur-sm will-change-auto lg:hidden" style="display: none;"></div>
+    </header>
+</div>
+    <div class="py-12 container xl:max-w-7xl mx-auto px-4 lg:px-10">
+            <div wire:id="zHTKnQSuPIYmojU66Er7">
+    <div class="flex flex-col items-center justify-center space-y-1 py-16">
+        <img src="./DiscordLookup_files/logo-light.svg" alt="DiscordLookup Logo">
+        <p class="text-xl font-bold text-center">Get more out of Discord with Discord Lookup</p>
+    </div>
+
+    <div class="space-y-4">
+        <div>
+    <a href="https://discordlookup.com/snowflake" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="far fa-snowflake text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Snowflake Decoder</span>
+                    <span class="text-base text-white">Get the creation date of a Snowflake, and detailed information about Discord users and guilds.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/user" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-user text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">User Lookup</span>
+                    <span class="text-base text-white">Get detailed information about Discord users with creation date, profile picture, banner and badges.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/guild" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-users text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Guild Lookup</span>
+                    <span class="text-base text-white">Get detailed information about Discord guilds with creation date, Invite/Vanity URL, features and emojis.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/application" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-puzzle-piece text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Application Lookup</span>
+                    <span class="text-base text-white">Get detailed information about Discord applications with description, links, tags and flags.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/guildlist" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fab fa-discord text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Guild List</span>
+                    <span class="text-base text-white">Show all the guilds you are on, with counters, permissions, features, experiments and more information about the guilds.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/experiments" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-flask text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Discord Experiments</span>
+                    <span class="text-base text-white">All Discord Client &amp; Guild Experiments with Rollout Status and detailed information about Treatments, Groups and Overrides.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/inviteresolver" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-link text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Invite Resolver</span>
+                    <span class="text-base text-white">Get detailed information about every invite and vanity url including event information.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/timestamp" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="far fa-clock text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Timestamp Styles</span>
+                    <span class="text-base text-white">Generate Discord timestamp styles based on a date, time, snowflake or timestamp.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/permissions-calculator" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-sort-numeric-down text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Permissions Calculator</span>
+                    <span class="text-base text-white">Calculate Discord permissions integer based on the required bot permissions.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/snowflake-distance" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrows-alt-h text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Snowflake Distance Calculator</span>
+                    <span class="text-base text-white">Calculate the distance between two Discord Snowflakes.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/guild-shard-calculator" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-server text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Guild Shard Calculator</span>
+                    <span class="text-base text-white">Calculate the Shard ID of a guild using the Guild ID and the total number of shards.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/webhook-invalidator" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-link text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Discord Webhook Invalidator</span>
+                    <span class="text-base text-white">Immediately delete a Discord webhook to eliminate evil webhooks.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/domains" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-virus text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">Bad Domain Check</span>
+                    <span class="text-base text-white">Check if a domain is listed as a bad domain on Discord.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://discordlookup.com/murmurhash" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-hashtag text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">MurmurHash3 Calculator</span>
+                    <span class="text-base text-white">Calculate the MurmurHash3 of a string with an optional Mod 10000.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://github.com/discordlookup/discordlookup" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fab fa-github text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">GitHub</span>
+                    <span class="text-base text-white">DiscordLookup.com is fully open source on GitHub! Feel free to give us a star.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+        <div>
+    <a href="https://easypoll.bot/" class="block rounded-lg bg-discord-gray-1 hover:-translate-y-1 transition duration-300 ease-in-out p-4 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-y-3 md:gap-y-0">
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-poll text-4xl m-auto"></i>
+            </div>
+            <div class="col-span-10 text-center md:text-left">
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold text-white">EasyPoll Discord Bot</span>
+                    <span class="text-base text-white">EasyPoll is the most popular poll bot on Discord! Made by the creators of DiscordLookup.</span>
+                </div>
+            </div>
+            <div class="col-span-1 inline-flex">
+                <i class="fas fa-arrow-right text-4xl m-auto"></i>
+            </div>
+        </div>
+    </a>
+</div>
+    </div>
+</div>
+
+<!-- Livewire Component wire-end:zHTKnQSuPIYmojU66Er7 -->
+    </div>
+</main>
+
+<div>
+    <footer class="bg-discord-gray-1">
+        <div class="container xl:max-w-7xl mx-auto px-4 py-8 lg:px-8 lg:py-16">
+            <div class="flex flex-col md:flex-row-reverse md:justify-between space-y-6 md:space-y-0 text-center md:text-left text-sm">
+                <nav class="space-x-4">
+                    <a href="https://discord.gg/XsPcgeuEmB" target="_blank" rel="noopener" class="text-gray-400 hover:text-discord-blurple">
+                        <i class="fab fa-discord text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/discordlookup/discordlookup" target="_blank" rel="noopener" class="text-gray-400 hover:text-discord-blurple">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://x.com/discordlookup" target="_blank" rel="noopener" class="text-gray-400 hover:text-discord-blurple">
+                        <i class="fab fa-x-twitter text-2xl"></i>
+                    </a>
+                </nav>
+                <div class="space-y-3">
+                    <div class="text-gray-300 font-bold">© 2025 DiscordLookup</div>
+                    <div class="text-gray-500">
+                        DiscordLookup is not affiliated, associated, authorized, endorsed by, or in anyway<br>
+                        officially connected with Discord Inc., or any of its subsidiaries or its affiliates.
+                    </div>
+                    <div class="text-gray-500">
+                        Commit:
+                        <a href="https://github.com/discordlookup/discordlookup/commit/25e3a92fca2fd265d0bb1073198fe8a354fd3cbb" target="_blank" rel="noopener">
+                            25e3a92fca2fd265d0bb1073198fe8a354fd3cbb
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-10 opacity-10">
+
+            <div class="text-center">
+                <a class="text-gray-400" href="https://discordlookup.com/legal-notice">Legal Notice</a>
+                <a class="text-gray-400 ms-2" href="https://discordlookup.com/terms-of-service">Terms of Service</a>
+                <a class="text-gray-400 ms-2" href="https://discordlookup.com/privacy-policy">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+<script src="./DiscordLookup_files/app.js.download" defer=""></script>
+
+
+<script src="./DiscordLookup_files/jquery-3.6.0.min.js.download"></script>
+
+<script src="./DiscordLookup_files/livewire.js.download" data-turbo-eval="false" data-turbolinks-eval="false"></script><script data-turbo-eval="false" data-turbolinks-eval="false">window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'LHvSKkpwdzWmaqCW4HV53wg807YW6e4X9khlJU0g';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+
+    <script defer="" data-domain="discordlookup.com" src="./DiscordLookup_files/script.js.download"></script>
+
+<script defer="" src="./DiscordLookup_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;935de86c9b4dcba4&quot;,&quot;version&quot;:&quot;2025.4.0-1-g37f21b1&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;f59c8560c0554c3fad04ff0796a61556&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}}}" crossorigin="anonymous"></script>
+
+
+</body></html>
